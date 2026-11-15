@@ -1,8 +1,12 @@
 # QUIP / Launch Observatory
 
-An offline, evidence-led token launch radar for [Token Radar](https://make.fun/api/competitions/token-radar-01).
+[![Token Radar on Make.fun](https://make.fun/badge/token-radar-01.svg)](https://make.fun/bounty/token-radar-01?utm_source=github&utm_medium=readme&utm_campaign=token-radar-01)
+[![Token Radar rank on Make.fun](https://make.fun/badge/token-radar-01/quipmontek/quip-launch-observatory/rank.svg)](https://make.fun/bounty/token-radar-01/leaderboard?utm_source=github&utm_medium=readme&utm_campaign=token-radar-01)
+[![Token Radar reward on Make.fun](https://make.fun/badge/token-radar-01/quipmontek/quip-launch-observatory/reward.svg)](https://make.fun/bounty/token-radar-01?utm_source=github&utm_medium=readme&utm_campaign=token-radar-01)
 
-**Ranking-only entry. Not prize-eligible in the current session mode.**
+An offline, evidence-led token launch radar for [Token Radar](https://make.fun/bounty/token-radar-01?utm_source=github&utm_medium=readme&utm_campaign=token-radar-01).
+
+**Free entry; ranking-only / no paid place. Not prize-eligible in the current session mode.**
 Competition deadline: 2026-12-14 at 10:00 UTC. Free entry; advertised pool $1,325 does not imply eligibility for this candidate.
 
 ## Run locally
