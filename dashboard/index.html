@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="color-scheme" content="light"><title>QUIP / Launch Observatory</title>
+  <link rel="stylesheet" href="app.css"><script defer src="../data.js"></script><script defer src="app.js"></script>
+</head>
+<body>
+  <a class="skip" href="#research">Skip to research board</a>
+  <header class="masthead"><a href="#" class="brand" aria-label="QUIP home">Q<span>QUIP</span></a><span class="edition">INDEPENDENT RESEARCH / LAUNCH OBSERVATORY</span><span class="frozen" id="frozen">FROZEN SNAPSHOT</span></header>
+  <main>
+    <section class="intro" aria-labelledby="title"><div><p class="eyebrow">THE PRE-LAUNCH RESEARCH DESK <span>01 / SEALED EDITION</span></p><h1 id="title">Before the token.<br><em>Understand the value.</em></h1><p class="lede">A transparent watchlist of protocols with no token recorded.<br>Observed capital, public-market comparables, and a reason to look closer.</p></div><aside class="research-note"><span class="note-number">↗</span><h2>A lens, not a promise.</h2><p>Implied market cap is a conditional scenario. It is not FDV, a launch probability, or a reward forecast.</p><span>NO INVESTMENT ADVICE · NO LIVE DATA</span></aside></section>
+    <section class="metrics" aria-label="Snapshot summary" id="metrics"></section>
+    <section class="board-section" id="research" aria-labelledby="board-title">
+      <div class="section-heading"><div><p class="eyebrow">01 / OPPORTUNITY UNIVERSE</p><h2 id="board-title">The research board<span class="dot"></span></h2></div><div class="actions"><button id="method-open">How we value ↗</button><button id="export">Export results ↓</button><button id="saved-toggle" aria-pressed="false">Saved <span id="saved-count">0</span></button></div></div>
+      <form class="filters" id="filters" role="search">
+        <label class="search-field">Search protocols<input id="search" type="search" placeholder="Name, slug, chain or category…" autocomplete="off"></label>
+        <label>Category<select id="category"><option value="">All categories</option></select></label>
+        <label>Chain<select id="chain"><option value="">All chains</option></select></label>
+        <label>Risk lens<select id="risk"><option value="">All risk lenses</option><option>Standard caution</option><option>High exposure</option><option>Elevated uncertainty</option></select></label>
+        <label>Sort by<select id="sort"><option value="value">Implied cap ↓</option><option value="tvl">Snapshot TVL ↓</option><option value="growth">7-day change ↓</option><option value="name">Name A–Z</option></select></label>
+      </form>
+      <div class="result-bar"><p id="result-count" role="status" aria-live="polite"></p><div><label class="check"><input type="checkbox" id="official"> Official watchlist only</label><button id="reset">Reset filters</button></div></div>
+      <div class="table-wrap"><table><thead><tr><th scope="col">Rank / Protocol</th><th scope="col">Category / Chain</th><th scope="col" class="number">TVL <span>snapshot</span></th><th scope="col" class="number">7D TVL</th><th scope="col" class="number">Implied market cap <span>base scenario</span></th><th scope="col">Sensitivity <span>bear → bull</span></th><th scope="col">Evidence</th><th scope="col"><span class="sr-only">Save</span></th></tr></thead><tbody id="rows"></tbody></table></div>
+      <div id="empty" class="empty" hidden><h3>No protocols match this lens.</h3><p>Try another chain or clear your search. Missing data is not evidence of absence.</p><button id="empty-reset">Clear all filters</button></div>
+      <div class="table-foot"><span id="shown"></span><button id="more">Show 25 more ↓</button><span>CAPITAL ≠ REVENUE · VALUE ≠ REWARD</span></div>
+    </section>
+    <section class="editorial"><div><p class="eyebrow">02 / READING THE SIGNAL</p><h2>What the numbers<br><em>cannot tell you.</em></h2></div><article><h3>Capital is not cash flow.</h3><p>TVL measures tracked capital, not revenue, profit or tokenholder rights. Peer market caps reflect circulating tokens; unknown supply and dilution prevent an FDV estimate.</p></article><article><h3>Participation is optional.</h3><p>No point program, airdrop or qualifying activity is verified. Every plan starts with free research. Deposits, fees, bridges and smart contracts can cause loss. Skipping is a valid outcome.</p></article></section>
+    <footer><span>QUIP / LAUNCH OBSERVATORY</span><span id="footer-date"></span><span>RANKING-ONLY · No prize eligibility claimed.</span></footer>
+  </main>
+  <dialog id="detail" aria-labelledby="detail-title"><div id="detail-content"></div></dialog>
+  <dialog id="method" aria-labelledby="method-title"><div class="dialog-head"><span class="eyebrow">RESEARCH NOTES / MODEL 1.0</span><button data-close="method" aria-label="Close methodology">Close ×</button></div><h2 id="method-title">An inspectable valuation, not a target.</h2><div class="method-grid"><article><h3>1. Select an honest universe</h3><p>All official watchlist slugs are included. Additional rows require no recorded symbol, CoinGecko ID or positive market cap. Bridge, staking, wrapper, exchange and version-marked products are conservatively screened out. Parent relationships are absent; residual product misclassification is possible.</p><h3>2. Observe public-market peers</h3><p>Peers must record a token, positive market cap and TVL, and pass the same product screen. Use the exact category with at least 4 peers; otherwise the related family with at least 6; otherwise the global eligible pool. These are analogues, not economic equivalents. Every detail includes the full selected pool.</p><h3>3. Robust ratios</h3><p>Compute each peer's market cap / TVL. Winsorize at interpolated 10th and 90th percentiles; take the median for base, 25th and 75th percentiles for sensitivity. Outliers remain visible in peer tables. Shared token market caps, overlapping TVL and different circulating supplies can bias comparisons.</p></article><article><div class="formula">TVL × peer median<br>× growth × tracking maturity</div><p>Growth = 1 + 0.2 × clamp(7D change, −50%, +50%). Missing growth is neutral, not observed zero. Tracking maturity = 0.70 + 0.30 × min(days tracked / 1,095, 1); missing date uses 0.85. Listing is not launch age or proof of security.</p><p>Bear uses peer Q25 × 0.75; bull uses Q75 × 1.25, with the same growth and maturity factors. These are sensitivity scenarios, not statistical bounds. The extra ±25% is an explicit analyst assumption.</p><h3>Evidence, not certainty</h3><p>Confidence is Moderate only for exact-category pools of 8+ peers with known age and growth; otherwise Low. Risk lenses flag fallback/missing evidence first, then >20% absolute growth or trading exposure. “Standard caution” never means safe. No protocol has verified tokenomics, fee capture, liquidity or launch intent in this input.</p><p id="method-source"></p></article></div></dialog>
+  <div id="toast" role="status" aria-live="polite"></div>
+</body>
+</html>

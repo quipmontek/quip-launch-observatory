@@ -1,0 +1,6 @@
+out/
+output/
+node_modules/
+*.log
+opencode.stderr
+opencode.stdout.jsonl
